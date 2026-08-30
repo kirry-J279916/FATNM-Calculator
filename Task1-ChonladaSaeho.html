@@ -1,0 +1,66 @@
+<!-- Version 2.0 -->
+<!-- This HTML is not correct. You will need to fix all html errors using W3Validator and add semantics for HTML5 including headings-->
+<!-- You will need add a title and your name -->
+<!-- Add or remove for a semantically valid page -->
+<!-- There are incorrect elements -->
+<!DOCTYPE html>
+<html lang="en-au">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>FATMN Calculator</title>
+	<link href="css/task1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="header"><!-- end .header --></div>
+		<div class="content">
+			<h1>JavaScript and HTML</h1>
+			<h2>Task 1: Simple Variables</h2>
+			<form name="theForm" method="post">
+				<fieldset>
+					<legend>Calculator</legend>
+					<ul>
+						<li>
+							<label>
+								Please enter a number between 0 and 50</label>
+							<input type="number" name="number" id="number" value="0" min="1" required>
+						</li>
+						<li>
+							<input type="submit" name="calculate" id="calculate" value="Calculate">
+							<label>The Factorial of your number is:
+								<input type="text" name="factorial" id="factorial">
+							</label>
+							<p>
+								<label>The square of your number is:
+									<input type="text" name="squared" id="squared">
+								</label>
+							</p>
+							<p>
+								<label>The cube of your number is:
+									<input type="text" name="cubed" id="cubed">
+								</label>
+
+						</li>
+
+
+					</ul>
+				</fieldset>
+			</form>
+			<p>&nbsp;</p>
+			<!-- end .content -->
+		</div>
+		<div class="footer">
+			<p>Chonlada Sae-ho</p>
+			<!-- end .footer -->
+		</div>
+		<!-- end .container -->
+	</div>
+	<script src="js/task1.js"></script>
+</body>
+
+</html>
