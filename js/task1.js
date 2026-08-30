@@ -7,20 +7,62 @@ Calculate the square and cube of the number. A number squared is a number that i
 calculates the number's factorial. A factorial is the product of an integer and all the integers below it; e.g., the factorial of 4 is equal to 24 (4 * 3 * 2 * 1).
 */
 
-function calculate(){
+
+// // test
+console.log(squared(10));
+console.log(cubed(10));
+console.log(factorial(10));
 
 
+function calculate() {
+    let number = document.getElementById("number").value;
+    let factorialValue;
+    let squaredValue;
+    let cubedValue;
+
+
+    factorialValue = factorial(number);
+    squaredValue = squared(number);
+    cubedValue = cubed(number);
+
+
+    document.getElementById("factorial").value = factorialValue;
+    document.getElementById("squared").value = squaredValue;
+    document.getElementById("cubed").value = cubedValue;
 
 	return false; 
 }
 // End of calculate() function.
 
 
-function init(){
-
-    
+function squared(n) {
+    result = n * n;
+    return result;
 }
-  // End of init() function.
+
+
+function cubed(n) {
+    result = n * n * n;
+    return result;
+}
+
+
+function factorial(n) {
+    let product;
+
+    for (let product = n; n > 1; n--) {
+        product += n;
+    }
+
+    return product;
+}
+
+
+function init() {
+    let theForm = document.getElementById("theForm");
+    theForm.onsubmit = calculate;
+}
+// End of init() function.
 
 
 window.onload = init;
