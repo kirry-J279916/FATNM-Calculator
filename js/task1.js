@@ -20,11 +20,9 @@ function calculate() {
     let squaredValue;
     let cubedValue;
 
-
     factorialValue = factorial(number);
     squaredValue = squared(number);
     cubedValue = cubed(number);
-
 
     document.getElementById("factorial").value = factorialValue;
     document.getElementById("squared").value = squaredValue;
@@ -36,25 +34,23 @@ function calculate() {
 
 
 function squared(n) {
-    result = n * n;
+    let result = n * n;
     return result;
 }
 
 
 function cubed(n) {
-    result = n * n * n;
+    let result = n * n * n;
     return result;
 }
 
 
 function factorial(n) {
     let product;
-
-    for (let product = n; n > 1; n--) {
-        product += n;
-    }
-
-    return product;
+    for (product = 1; n > 1; n--) {
+        product *= n;
+        }
+        return product;
 }
 
 
