@@ -8,25 +8,26 @@ calculates the number's factorial. A factorial is the product of an integer and 
 */
 
 
-// // test
-console.log(squared(10));
-console.log(cubed(10));
-console.log(factorial(10));
-
-
 function calculate() {
-    let number = document.getElementById("number").value;
+    'use strict';
+    let stringInput = document.getElementById("number").value;
+    let numberInput = Number(stringInput);
     let factorialValue;
     let squaredValue;
     let cubedValue;
 
-    factorialValue = factorial(number);
-    squaredValue = squared(number);
-    cubedValue = cubed(number);
+    if (numberInput >= 1 && numberInput <= 50) {
+        factorialValue = factorial(numberInput);
+        squaredValue = squared(numberInput);
+        cubedValue = cubed(numberInput);
 
-    document.getElementById("factorial").value = factorialValue;
-    document.getElementById("squared").value = squaredValue;
-    document.getElementById("cubed").value = cubedValue;
+        document.getElementById("factorial").value = factorialValue;
+        document.getElementById("squared").value = squaredValue;
+        document.getElementById("cubed").value = cubedValue;
+    }
+    else {
+        alert("You must enter a number between 1-50");
+    }
 
 	return false; 
 }
@@ -34,18 +35,21 @@ function calculate() {
 
 
 function squared(n) {
+    'use strict';
     let result = n * n;
     return result;
 }
 
 
 function cubed(n) {
+    'use strict';
     let result = n * n * n;
     return result;
 }
 
 
 function factorial(n) {
+    'use strict';
     let product;
     for (product = 1; n > 1; n--) {
         product *= n;
@@ -55,6 +59,7 @@ function factorial(n) {
 
 
 function init() {
+    'use strict';
     let theForm = document.getElementById("theForm");
     theForm.onsubmit = calculate;
 }
